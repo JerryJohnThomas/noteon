@@ -37,3 +37,16 @@ https://www.behance.net/pankaj_design
 
 
 
+****
+
+Something Like NoteBook readme and that should have all the links
+each notebook can have a picture optional
+
+section and section groups
+
+Notebook can have one of these
+- section
+- section group
+- page
+
+
