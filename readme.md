@@ -60,5 +60,6 @@ Motivation: Evernote Shut Down its free tier
 
 Eventually want to asd crdt and teams feature and live sharing
 maybe add a publish button that will make it a page public
-
+ocr on images to search is another thing
+tags
 
