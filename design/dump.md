@@ -20,3 +20,20 @@ nice
 
 https://dribbble.com/shots/18464380-Notes-Taking-app-concept
 background dotted
+
+
+
+https://www.behance.net/gallery/203243575/Noted-Note-Taking-App?tracking_source=search_projects|note+taking+app&l=8
+ok
+
+
+
+https://www.behance.net/gallery/156805465/notable
+I like this 
+
+
+
+https://www.behance.net/pankaj_design
+
+
+
