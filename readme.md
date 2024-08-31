@@ -36,11 +36,9 @@ Motivation: Evernote Shut Down its free tier
     - [ ] Home Page Basics
     - [ ] NoteBook Page Basics
     - [ ] Font Pair Page Basics
-   - [] Design and implement user interface for mobile app
+    - [ ] Login Page 
    - [ ] Implement note creation, editing, and deletion
-   - [ ] Add rich text formatting capabilities
    - [ ] Implement offline mode and sync functionality
-   - [ ] Integrate image and file attachment support
 
 - [ ] 2. Backend Infrastructure
    - [ ] Set up cloud-based server architecture
@@ -48,6 +46,7 @@ Motivation: Evernote Shut Down its free tier
    - [ ] Develop user authentication and authorization system
    - [ ] Create data storage and retrieval system
    - [ ] Implement data synchronization mechanism
+   - [ ] Structure the data in a way that is easy to query and update
 
 - [ ] 3. Cross-Platform Sync
    - [ ] Develop real-time synchronization between mobile and web versions
