@@ -57,3 +57,8 @@ Motivation: Evernote Shut Down its free tier
    - [ ] Implement full-text search functionality
    - [ ] Develop tagging and categorization system
    - [ ] Create smart folders and filtering options
+
+Eventually want to asd crdt and teams feature and live sharing
+maybe add a publish button that will make it a page public
+
+
