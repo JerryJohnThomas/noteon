@@ -35,6 +35,7 @@ Motivation: Evernote Shut Down its free tier
 * account sync manager maybe 2 devices in free plan with 300 notes
 * exporter with markdown and pdf
 
+* possibilty of encryption in the future
 
 # Epics expanded
 
