@@ -3,6 +3,7 @@
 * welcome to note On
 * Your beautiful looking notes.
 
+I want to make this app just aesthetically beautiful and get a nice feel on ios, android and windows and web. So i want to take my time and do this
 
 Project init date : 31st August 202
 Motivation: Evernote Shut Down its free tier
@@ -12,6 +13,16 @@ Motivation: Evernote Shut Down its free tier
 * have a web version
 * have a windows desktop version
 
+
+# hurdles
+* need a apple dev account ($100 yearly)
+* need a android dev account ($25 once)
+* dont have a mac at the moment 
+   * unable to build an ios, but i found out that eas expo does the build for you
+   * not sure about mac desktop app, if that will come out it in the future
+* A Financial provider that can accept both international and Indian payments
+   * lemon squeezy , paddle (i think ill go with this)
+   * https://www.reddit.com/r/SaaS/comments/13noyxv/paddle_vs_lemon_squeezy_experiences/
 
 
 # Epics
