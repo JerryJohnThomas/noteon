@@ -36,6 +36,7 @@ Motivation: Evernote Shut Down its free tier
 * exporter with markdown and pdf
 
 * possibilty of encryption in the future
+* trash
 
 # Epics expanded
 
