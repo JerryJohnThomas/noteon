@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, Dimensions, TextInput, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "@/contexts/ThemeContext"; // Adjust the path as needed
 import { Ionicons, MaterialIcons } from "@expo/vector-icons"; // Import Ionicons from @expo/vector-icons
+import fetchNotes from "@/utils/fetchNotes";
+import HomeNoteItem from "@/Components/HomeNoteItem";
 
 const { width, height } = Dimensions.get("window"); // Get the screen dimensions
 const COMMON_H_PADDING = 30;
@@ -11,6 +13,15 @@ const COMMON_H_PADDING = 30;
 const Home = () => {
     const { primaryColor, secondaryColor, tertiaryColor, background, debugBackground } = useTheme();
     const [query, setQuery] = useState(""); // Initialize state for search query
+    const [notes, setNotes] = useState([]); // State to store fetched notes
+
+    useEffect(() => {
+        const loadNotes = async () => {
+            const fetchedNotes = await fetchNotes();
+            setNotes(fetchedNotes);
+        };
+        loadNotes();
+    }, []);
 
     const handleClear = () => {
         setQuery("");
@@ -20,12 +31,19 @@ const Home = () => {
         // IMPLEMENT NOTE SORT LOGIC Here
     };
 
+    const handleSettings = () => {
+        // IMPLEMENT Settings LOGIC Here
+    };
+
+
     return (
         <SafeAreaView edges={["top", "right", "left"]} style={[styles.safeArea, { backgroundColor: background }]}>
             <View style={[styles.headerContainer, styles.commonHortizontalPadder]}>
                 <Text style={[styles.headerText, { color: primaryColor }]}>noteon</Text>
                 <View style={styles.iconContainer}>
-                    <Ionicons name="settings-outline" size={30} color="black" />
+                    <TouchableOpacity onPress={() => handleSettings()}>
+                        <Ionicons name="settings-outline" size={30} color="black" />
+                    </TouchableOpacity>
                 </View>
             </View>
 
@@ -52,6 +70,19 @@ const Home = () => {
             </View>
 
             <View style={styles.bodyContainer}>
+                {notes.map((note, index) => (
+                    <HomeNoteItem
+                        key={index} // Use the index or unique id as a key
+                        title={note.title}
+                        body={note.body}
+                        date={note.date}
+                        createdBy={note.createdBy}
+                        createdDate={note.createdDate}
+                        updatedBy={note.updatedBy}
+                        updatedDate={note.updatedDate}
+                    />
+                ))}
+
                 <Text style={[styles.bodyText, { color: tertiaryColor }]}>Body</Text>
                 <Text style={[styles.bodyText, { color: tertiaryColor }]}>home</Text>
                 <Text style={[styles.bodyText, { color: tertiaryColor }]}>home</Text>
