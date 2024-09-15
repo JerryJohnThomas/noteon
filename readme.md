@@ -3,6 +3,14 @@
 * welcome to note On
 * Your beautiful looking notes.
 
+Update: Temporarly Paused, as I found out apples notes web is not too bad, and that takes out all the ios users.   
+
+how to win
+* stats page
+* publish button
+* markdown support
+* future latex support maybe, game changer
+
 I want to make this app just aesthetically beautiful and get a nice feel on ios, android and windows and web. So i want to take my time and do this
 
 Project init date : 31st August 202
@@ -24,8 +32,21 @@ Motivation: Evernote Shut Down its free tier
    * lemon squeezy , paddle (i think ill go with this)
    * https://www.reddit.com/r/SaaS/comments/13noyxv/paddle_vs_lemon_squeezy_experiences/
 
+# Executive techincal designs
 
-# Epics
+* socket with user alive and subscription
+* maintain local with operations done so that can be synced with a single tramsaction
+* possible extend into crdts with this framework
+* a routine any file mis match check
+* hyper links
+* notebook 3 way linkage
+* account sync manager maybe 2 devices in free plan with 300 notes
+* exporter with markdown and pdf
+
+* possibilty of encryption in the future
+* trash
+
+# Epics expanded
 
 - [ ] 1. Mobile App Development
     - [ ] Form a Basic UI Idea 
