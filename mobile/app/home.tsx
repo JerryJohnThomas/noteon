@@ -2,24 +2,12 @@ import { View, Text, StyleSheet } from "react-native";
 import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-SplashScreen.preventAutoHideAsync();
+import { useRouter } from "expo-router";
+import { useRoute } from "@react-navigation/native";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const home = () => {
-    const [fontsLoaded, error] = useFonts({
-        "Urbanist-Black": require("../assets/fonts/Urbanist-Black.ttf"),
-        "Urbanist-ThinItalic": require("../assets/fonts/Urbanist-ThinItalic.ttf"),
-    });
-
-    useEffect(() => {
-        if (fontsLoaded || error) {
-            SplashScreen.hideAsync();
-        }
-    }, [fontsLoaded, error]);
-
-    if (!fontsLoaded && !error) {
-        return null;
-    }
-
+    const { primaryColor, secondaryColor, setPrimaryColor } = useTheme();
     return (
         <View>
             <Text>home</Text>
