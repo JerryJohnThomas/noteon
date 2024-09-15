@@ -6,23 +6,34 @@ interface ThemeContextType {
   secondaryColor: string;
   tertiaryColor: string;
   background: string;
+  debugBackground: string;
   withPattern: boolean;
   setPrimaryColor: (color: string) => void;
   setSecondaryColor: (color: string) => void;
   setTertiaryColor: (color: string) => void;
   setBackground: (background: string) => void;
+  setDebugBackground: (background: string) => void;
   setWithPattern: (withPattern: boolean) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [primaryColor, setPrimaryColor] = useState('#3498db');
-  const [secondaryColor, setSecondaryColor] = useState('#2ecc71');
-  const [tertiaryColor, setTertiaryColor] = useState('#e74c3c');
-  const [background, setBackground] = useState('#ffffff');
-  const [withPattern, setWithPattern] = useState(false);
+const lightTheme = {
+    background:"#F9F8F8",
+    primaryColor :'#000000',
+    secondaryColor :'rgba(0,0,0,0.4)',
+    tertiaryColor :'#e74c3c',
+    debugBackground :'peachpuff',
+    withPattern :false,
+};
 
+export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [primaryColor, setPrimaryColor] = useState(lightTheme.primaryColor);
+  const [secondaryColor, setSecondaryColor] = useState(lightTheme.secondaryColor);
+  const [tertiaryColor, setTertiaryColor] = useState(lightTheme.tertiaryColor);
+  const [background, setBackground] = useState(lightTheme.background);
+  const [debugBackground, setDebugBackground] = useState(lightTheme.debugBackground);
+  const [withPattern, setWithPattern] = useState(lightTheme.withPattern);
   return (
     <ThemeContext.Provider
       value={{
@@ -36,6 +47,8 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         setTertiaryColor,
         setBackground,
         setWithPattern,
+        debugBackground,
+        setDebugBackground
       }}
     >
       {children}
