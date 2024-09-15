@@ -3,6 +3,14 @@
 * welcome to note On
 * Your beautiful looking notes.
 
+Update: Temporarly Paused, as I found out apples notes web is not too bad, and that takes out all the ios users.   
+
+how to win
+* stats page
+* publish button
+* markdown support
+* future latex support maybe, game changer
+
 I want to make this app just aesthetically beautiful and get a nice feel on ios, android and windows and web. So i want to take my time and do this
 
 Project init date : 31st August 202
